@@ -16,14 +16,14 @@
 </head>
 
 <body>
-    <div id="container" style="min-width:400px;height:600px">图表加载中...</div>
+    <div id="container" style="min-width:400px;height:400px">图表加载中...</div>
     <script>
         Highcharts.setOptions({
             lang: {
                 rangeSelectorZoom: ''
             }
         });
-        $.getJSON('http://localhost:8000/jsonp/', function (data) {
+        $.getJSON('https://data.jianshukeji.com/stock/history/000001', function (data) {
             if (data.code !== 1) {
                 alert('读取股票数据失败！');
                 return false;
@@ -61,7 +61,7 @@
                     inputDateFormat: '%Y-%m-%d'
                 },
                 title: {
-                    text: '上海黄金交易所每日金价走势'
+                    text: '平安银行历史股价'
                 },
                 xAxis: {
                     dateTimeLabelFormats: {
@@ -107,7 +107,7 @@
                 }],
                 series: [{
                     type: 'candlestick',
-                    name: 'Au(T+D)',
+                    name: '平安银行',
                     color: 'green',
                     lineColor: 'green',
                     upColor: 'red',

@@ -18,7 +18,7 @@ def runoob(request):
 def get_json(request):
 
     filename = os.path.join(os.path.dirname(os.path.dirname(
-        os.path.abspath(__file__))), 'templates', 'k_json.json')
+        os.path.abspath(__file__))), 'templates', 'k_da.json')
     print(filename)
 
     def load_by_json(filename):

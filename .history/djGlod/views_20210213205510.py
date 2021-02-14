@@ -16,14 +16,12 @@ def runoob(request):
 
 
 def get_json(request):
-
     filename = os.path.join(os.path.dirname(os.path.dirname(
-        os.path.abspath(__file__))), 'templates', 'k_json.json')
+        os.path.abspath(__file__))), 'templates', 'jsonp.json')
     print(filename)
 
-    def load_by_json(filename):
+    def read_json(filename):
         with open(filename, 'r', encoding='utf-8') as f:
             return json.loads(f.readline(), encoding='utf-8')
-
-    jsfile = load_by_json(filename)
-    return HttpResponse(json.dumps(jsfile))
+    js = read_json(filename)
+    return HttpResponse(js)

@@ -20,7 +20,7 @@ from . import views
 
 urlpatterns = [
     path('', views.hello),
-    path('jsonp/', views.get_json),
+    path('jsonp', views.get_json),
     path('price/', views.runoob),
     path('admin/', admin.site.urls),
 ]

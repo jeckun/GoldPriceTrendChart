@@ -16,14 +16,11 @@ def runoob(request):
 
 
 def get_json(request):
-
-    filename = os.path.join(os.path.dirname(os.path.dirname(
-        os.path.abspath(__file__))), 'templates', 'k_json.json')
-    print(filename)
-
-    def load_by_json(filename):
-        with open(filename, 'r', encoding='utf-8') as f:
-            return json.loads(f.readline(), encoding='utf-8')
-
-    jsfile = load_by_json(filename)
+    jsfile = [
+        [1317600000000, 380.37, 382.64, 373.17, 374.60],
+        [1317686400000, 374.57, 381.80, 354.24, 372.50],
+        [1317772800000, 367.86, 379.82, 360.30, 378.25],
+        [1317859200000, 373.33, 384.78, 371.80, 377.37],
+        [1317945600000, 375.78, 377.74, 368.49, 369.80],
+    ]
     return HttpResponse(json.dumps(jsfile))

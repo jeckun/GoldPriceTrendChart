@@ -23,6 +23,7 @@
                 rangeSelectorZoom: ''
             }
         });
+        // $.getJSON('https://data.jianshukeji.com/stock/history/000001', function (data) {
         $.getJSON('http://localhost:8000/jsonp/', function (data) {
             if (data.code !== 1) {
                 alert('读取股票数据失败！');

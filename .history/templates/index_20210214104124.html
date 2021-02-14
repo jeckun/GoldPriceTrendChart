@@ -23,6 +23,7 @@
                 rangeSelectorZoom: ''
             }
         });
+        // $.getJSON('https://data.jianshukeji.com/stock/history/000001', function (data) {
         $.getJSON('http://localhost:8000/jsonp/', function (data) {
             if (data.code !== 1) {
                 alert('读取股票数据失败！');
@@ -61,7 +62,7 @@
                     inputDateFormat: '%Y-%m-%d'
                 },
                 title: {
-                    text: '上海黄金交易所每日金价走势'
+                    text: '上海黄金交易所每日金价'
                 },
                 xAxis: {
                     dateTimeLabelFormats: {
@@ -107,7 +108,7 @@
                 }],
                 series: [{
                     type: 'candlestick',
-                    name: 'Au(T+D)',
+                    name: '平安银行',
                     color: 'green',
                     lineColor: 'green',
                     upColor: 'red',
