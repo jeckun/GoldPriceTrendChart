@@ -23,8 +23,8 @@
                 rangeSelectorZoom: ''
             }
         });
-        $.getJSON('http://localhost:8000/jsonp/', function (data) {
-            // $.getJSON('https://data.jianshukeji.com/stock/history/000001', function (data) {
+        // $.getJSON('http://localhost:8000/jsonp/', function (data) {
+        $.getJSON('https://data.jianshukeji.com/stock/history/000001', function (data) {
             if (data.code !== 1) {
                 alert('读取股票数据失败！');
                 return false;
@@ -86,7 +86,7 @@
                         x: -3
                     },
                     title: {
-                        text: '金价'
+                        text: '股价'
                     },
                     height: '65%',
                     resize: {
