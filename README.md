@@ -20,4 +20,4 @@ $ python manager.py runserver
 
 ## 后续
 
-这只是个测试项目，后续计划与 shGlodprice 合并成为一个完整的项目
+这只是个测试项目！
